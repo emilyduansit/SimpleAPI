@@ -21,7 +21,11 @@ namespace SimpleAPI.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "Les Jackson";
+           switch(id)
+           {
+               case 1: return "Monday";
+               default: return "Sunday";
+           }
         }
 
         // POST api/values
